@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="AVP_3_0_1" Language="1033" Version="1.0.0.0" Manufacturer="" UpgradeCode="399b291f-af7d-40e1-9b4a-d3fc7da98def">
-		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+	<Product Id="*" 
+           Name="AVP_3_0_1" 
+           Language="1033" 
+           Version="3.0.1.0" 
+           Manufacturer="" 
+           UpgradeCode="399b291f-af7d-40e1-9b4a-d3fc7da98def">
+    
+		<Package Description="AVP Installer - No dependencies" 
+             InstallerVersion="200" 
+             Compressed="yes" 
+             InstallScope="perUser" />
 
-		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
-		<MediaTemplate />
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed."
+                  AllowSameVersionUpgrades="yes"/>
+    
+		<MediaTemplate Id="1"
+                   Cabinet="cabinet.cab"
+                   EmbedCab="yes"/>
 
 		<Feature Id="ProductFeature" Title="AVP_3_0_1" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
