@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "AVP 3_0_1", "AVP 3_0_1\AVP 3_0_1.wixproj", "{B627EFF5-2CA3-42E8-8C17-74D1B9BD1AB9}"
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "AVP", "AVP 3_0_1\AVP.wixproj", "{B627EFF5-2CA3-42E8-8C17-74D1B9BD1AB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

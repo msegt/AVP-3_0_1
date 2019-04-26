@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 	<Product Id="*" 
-           Name="AVP_3_0_1" 
+           Name="AVP" 
            Language="1033" 
            Version="3.0.1.0" 
-           Manufacturer="" 
+           Manufacturer="msegt" 
            UpgradeCode="399b291f-af7d-40e1-9b4a-d3fc7da98def">
     
 		<Package Description="AVP Installer - No dependencies" 
@@ -12,32 +12,57 @@
              Compressed="yes" 
              InstallScope="perUser" />
 
-		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed."
-                  AllowSameVersionUpgrades="yes"/>
+		<MajorUpgrade AllowDowngrades="no" 
+                  DowngradeErrorMessage="A newer version of [ProductName] is already installed."
+                  AllowSameVersionUpgrades="no"/>
     
-		<MediaTemplate Id="1"
-                   Cabinet="cabinet.cab"
-                   EmbedCab="yes"/>
+		<MediaTemplate />
 
-		<Feature Id="ProductFeature" Title="AVP_3_0_1" Level="1">
-			<ComponentGroupRef Id="ProductComponents" />
+    <Property Id="ARPCOMMENTS">
+      AVP 3.0.1 installer. It only installs the AVP and not dependencies.     
+    </Property>
+
+    <Property Id="ARPCONTACT">
+      Maria Galvez Trigo
+    </Property>
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder" Name="PFiles">
+        <Directory Id="INSTALLDIR" Name="AVP">
+          <Component Id="readme">
+            <File Id="readme" Name="README.md" Source="README.md" />
+          </Component>
+          <Directory Id="ItemDir" />
+        </Directory>
+      </Directory>
+    </Directory>
+    
+		<Feature Id="Software" 
+             Title="AVP" 
+             Level="1" 
+             AllowAdvertise="no" 
+             ConfigurableDirectory="INSTALLDIR">
+      <ComponentRef Id="readme" />
+			<ComponentGroupRef Id="Items" />
 		</Feature>
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+    <UIRef Id="WixUI_InstallDir" />
+    
 	</Product>
 
-	<Fragment>
-		<Directory Id="TARGETDIR" Name="SourceDir">
-			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="AVP_3_0_1" />
-			</Directory>
-		</Directory>
+	<!--
+  <Fragment>
+		
 	</Fragment>
+  -->
 
-	<Fragment>
-		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
-			<!-- <Component Id="ProductComponent"> -->
-				<!-- TODO: Insert files, registry keys, and other resources here. -->
-			<!-- </Component> -->
+  <!--<Fragment>
+		<ComponentGroup Id="AVP-master" Directory="INSTALLDIR">
+			 TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. 
+			 <Component Id="ProductComponent"> 
+				 TODO: Insert files, registry keys, and other resources here. 
+			 </Component> 
 		</ComponentGroup>
-	</Fragment>
+	</Fragment> -->
 </Wix>

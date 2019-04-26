@@ -3,16 +3,20 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>3.10</ProductVersion>
+    <ProductVersion>3.0.1</ProductVersion>
+    <DefineConstants>ProductVersion=$(ProductVersion);ItemDir=items</DefineConstants>
     <ProjectGuid>b627eff5-2ca3-42e8-8c17-74d1b9bd1ab9</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>AVP_3_0_1</OutputName>
+    <OutputName>AVP_$(ProductVersion)</OutputName>
     <OutputType>Package</OutputType>
+    <Name>AVP</Name>
+    <DefineSolutionProperties>false</DefineSolutionProperties>
+    <EnableProjectHarvesting>True</EnableProjectHarvesting>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>Debug</DefineConstants>
+    <DefineConstants>Debug;$(DefineConstants)</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -20,6 +24,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Product.wxs" />
+    <HarvestDirectory Include="items">
+      <DirectoryRefId>ItemDir</DirectoryRefId>
+      <ComponentGroupName>Items</ComponentGroupName>
+      <PreprocessorVariable>var.ItemDir</PreprocessorVariable>
+      <SuppressCom>true</SuppressCom>
+      <SuppressRegistry>true</SuppressRegistry>
+    </HarvestDirectory>
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />
