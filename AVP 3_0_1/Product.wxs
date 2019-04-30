@@ -14,7 +14,7 @@
 
 		<MajorUpgrade AllowDowngrades="no" 
                   DowngradeErrorMessage="A newer version of [ProductName] is already installed."
-                  AllowSameVersionUpgrades="no"/>
+                  AllowSameVersionUpgrades="yes"/>
     
 		<MediaTemplate />
 
@@ -48,6 +48,15 @@
 
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
     <UIRef Id="WixUI_InstallDir" />
+
+    <WixVariable Id="WixUILicenseRtf" Value="LICENSE.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="LogoAria.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="LogoAria.bmp" />
+    <!--<WixVariable Id="WixUIExclamationIco" Value="LogoAria.bmp" />
+    <WixVariable Id="WixUIInfoIco" Value="LogoAria.bmp" />
+    <WixVariable Id="WixUINewIco" Value="LogoAria.bmp" />
+    <WixVariable Id="WixUIUpIco" Value="LogoAria.bmp" />
+    -->
     
 	</Product>
 
