@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 	<Product Id="*" 
-           Name="AVP" 
+           Name="Aria Valuspa Platform" 
            Language="1033" 
            Version="3.0.1.0" 
-           Manufacturer="msegt" 
+           Manufacturer="University of Nottingham" 
            UpgradeCode="399b291f-af7d-40e1-9b4a-d3fc7da98def">
     
-		<Package Description="AVP Installer - No dependencies" 
+		<Package Description="Aria Valuspa Platform (no dependencies)" 
              InstallerVersion="200" 
              Compressed="yes" 
              InstallScope="perUser" />
@@ -19,7 +19,7 @@
 		<MediaTemplate />
 
     <Property Id="ARPCOMMENTS">
-      AVP 3.0.1 installer. It only installs the AVP and not dependencies.     
+      Aria Valuspa Platform v3.0.1 installer. It only installs the Aria Valuspa Platform
     </Property>
 
     <Property Id="ARPCONTACT">
@@ -28,7 +28,7 @@
     
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="ProgramFilesFolder" Name="PFiles">
-        <Directory Id="INSTALLDIR" Name="AVP">
+        <Directory Id="INSTALLDIR" Name="Aria Valuspa Platform">
           <Component Id="readme">
             <File Id="readme" Name="README.md" Source="README.md" />
           </Component>
@@ -38,7 +38,7 @@
     </Directory>
     
 		<Feature Id="Software" 
-             Title="AVP" 
+             Title="Aria Valuspa Platform" 
              Level="1" 
              AllowAdvertise="no" 
              ConfigurableDirectory="INSTALLDIR">
@@ -49,9 +49,10 @@
     <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
     <UIRef Id="WixUI_InstallDir" />
 
+    <!-- Customising of license and images in installer.-->
     <WixVariable Id="WixUILicenseRtf" Value="LICENSE.rtf" />
-    <WixVariable Id="WixUIBannerBmp" Value="LogoAria.bmp" />
-    <WixVariable Id="WixUIDialogBmp" Value="LogoAria.bmp" />
+    <WixVariable Id="WixUIBannerBmp" Value="AriaBanner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="AriaBackground.bmp" />
     <!--<WixVariable Id="WixUIExclamationIco" Value="LogoAria.bmp" />
     <WixVariable Id="WixUIInfoIco" Value="LogoAria.bmp" />
     <WixVariable Id="WixUINewIco" Value="LogoAria.bmp" />
@@ -59,19 +60,4 @@
     -->
     
 	</Product>
-
-	<!--
-  <Fragment>
-		
-	</Fragment>
-  -->
-
-  <!--<Fragment>
-		<ComponentGroup Id="AVP-master" Directory="INSTALLDIR">
-			 TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. 
-			 <Component Id="ProductComponent"> 
-				 TODO: Insert files, registry keys, and other resources here. 
-			 </Component> 
-		</ComponentGroup>
-	</Fragment> -->
 </Wix>
