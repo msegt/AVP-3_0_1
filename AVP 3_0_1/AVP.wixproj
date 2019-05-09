@@ -4,12 +4,12 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>3.0.1</ProductVersion>
-    <DefineConstants>ProductVersion=$(ProductVersion);ItemDir=items</DefineConstants>
+    <DefineConstants>ProductVersion=$(ProductVersion);ItemDir=AVP</DefineConstants>
     <ProjectGuid>b627eff5-2ca3-42e8-8c17-74d1b9bd1ab9</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>AVP_$(ProductVersion)</OutputName>
+    <OutputName>AVP_$(ProductVersion)_setup</OutputName>
     <OutputType>Package</OutputType>
-    <Name>AVP</Name>
+    <Name>Aria Valuspa Platform</Name>
     <DefineSolutionProperties>false</DefineSolutionProperties>
     <EnableProjectHarvesting>True</EnableProjectHarvesting>
   </PropertyGroup>
@@ -24,7 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Product.wxs" />
-    <HarvestDirectory Include="items">
+    <HarvestDirectory Include="AVP">
       <DirectoryRefId>ItemDir</DirectoryRefId>
       <ComponentGroupName>Items</ComponentGroupName>
       <PreprocessorVariable>var.ItemDir</PreprocessorVariable>

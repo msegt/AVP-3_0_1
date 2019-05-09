@@ -10,16 +10,19 @@
 		<Package Description="Aria Valuspa Platform (no dependencies)" 
              InstallerVersion="200" 
              Compressed="yes" 
-             InstallScope="perUser" />
+             InstallScope="perMachine"
+             InstallPrivileges="elevated"/>
 
 		<MajorUpgrade AllowDowngrades="no" 
                   DowngradeErrorMessage="A newer version of [ProductName] is already installed."
                   AllowSameVersionUpgrades="yes"/>
     
-		<MediaTemplate />
+		<!-- CHANGE COMPRESSIONLEVEL TO high FOR RELEASE VERSION!!! -->
+    <MediaTemplate EmbedCab="yes"
+                   CompressionLevel="none"/>
 
     <Property Id="ARPCOMMENTS">
-      Aria Valuspa Platform v3.0.1 installer. It only installs the Aria Valuspa Platform
+      Aria Valuspa Platform v3.0.1 installer. It only installs the Aria Valuspa Platform, please use the full package installer to install dependencies and models.
     </Property>
 
     <Property Id="ARPCONTACT">
