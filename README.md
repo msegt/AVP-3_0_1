@@ -1,9 +1,5 @@
 # Aria Valuspa Platform installer for AVP v3.0.1 - Only folder structure, no dependencies
 
-Installer for Aria Valuspa Platform 3.0.1 folder structure.
-
--------------------
-
 This project is part of an installer for the Aria Valuspa Platform v3.0.1. 
 
 The latest release of the AVP (v3.0.1 at 17/05/2019) can be found at: https://github.com/ARIA-VALUSPA/AVP
@@ -13,7 +9,7 @@ The latest release of the AVP (v3.0.1 at 17/05/2019) can be found at: https://gi
 Simply download the installer to your Windows x64 machine and run the .msi file
 
 
-_**Please note that no dependencies will be installed unless you used the bundle installer or install them manually.**_
+_**Note that no dependencies will be installed unless you used the bundle installer or install them manually!**_
 
 ##How to install the Aria Valuspa Platform and its dependencies (bundle installer)
 
