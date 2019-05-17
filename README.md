@@ -2,11 +2,12 @@
 Installer for Aria Valuspa Platform 3.0.1
 
 -------------------
-maria [dot] galveztrigo [at] nottingham [dot] ac [dot] uk
+Maria.galveztrigo@nottingham.ac.uk
 -------------------
 
-This project will become an installer for the Aria Valuspa Platform v3.0.1, but it is currently on early stages of development.
+This project is part of an installer for the Aria Valuspa Platform v3.0.1. 
 
-The purpose of this installer is to copy the relevant folder structure to the installation directory, and will be part of a bundle installer that will check for dependencies and install them if necessary as well.
+It has been built using WiX toolset v3.11 and Microsoft Visual Studio 2017/2019.
 
-It has been created using the WiX toolkit and Microsoft Visual Studio.
+This installer only installs the AVP folder structure in the machine running the installer. To get an installer that checks for dependencies and installs the ones missing, as well as the AVP folder, please refer to:
+
