@@ -19,7 +19,7 @@
     
 		<!-- CHANGE COMPRESSIONLEVEL TO high FOR RELEASE VERSION!!! -->
     <MediaTemplate EmbedCab="yes"
-                   CompressionLevel="none"/>
+                   CompressionLevel="high"/>
 
     <Property Id="ARPCOMMENTS">
       Aria Valuspa Platform v3.0.1 installer. It only installs the Aria Valuspa Platform, please use the full package installer to install dependencies and models.
