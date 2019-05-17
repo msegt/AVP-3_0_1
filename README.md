@@ -4,14 +4,14 @@ This project is part of an installer for the Aria Valuspa Platform v3.0.1.
 
 The latest release of the AVP (v3.0.1 at 17/05/2019) can be found at: https://github.com/ARIA-VALUSPA/AVP
 
-##How to install the Aria Valuspa Platform (folder structure only, no dependencies)
+## How to install the Aria Valuspa Platform (folder structure only, no dependencies)
 
 Simply download the installer to your Windows x64 machine and run the .msi file
-
+https://dev.azure.com/MariaGalvezTrigo/_git/AVP_bundle_installer?path=%2FAVP_bundle_installer&version=GBmaster#path=%2FAVP_bundle_installer%2FAVP_3.0.1_setup.msi&version=GBmaster
 
 _**Note that no dependencies will be installed unless you used the bundle installer or install them manually!**_
 
-##How to install the Aria Valuspa Platform and its dependencies (bundle installer)
+## How to install the Aria Valuspa Platform and its dependencies (bundle installer)
 
 Simply download the bundle installer to your Windows x64 machine and run the .exe file https://dev.azure.com/MariaGalvezTrigo/_git/AVP_bundle_installer#path=%2FAVP_bundle_installer.exe&version=GBmaster 
 
