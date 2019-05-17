@@ -25,7 +25,7 @@ In order to modify the installer you need:
 - WiX toolset v3.11
 - Wix Visual Studio Extension for your version of Visual Studio.
 
-Open the solution AVP-3_0_1/AVP.sln and edit the file AVP-3_0_1/AVP-3_0_1/Project.wxs 
+Open the solution AVP-3_0_1/AVP.sln and edit the file AVP-3_0_1/AVP-3_0_1/Product.wxs 
 
 ## Built With
 
