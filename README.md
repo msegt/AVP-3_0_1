@@ -2,8 +2,6 @@
 Installer for Aria Valuspa Platform 3.0.1
 
 -------------------
-Maria.galveztrigo@nottingham.ac.uk
--------------------
 
 This project is part of an installer for the Aria Valuspa Platform v3.0.1. 
 
