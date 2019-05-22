@@ -1,2 +1,0 @@
-live = false 										# $(bool) use live input from a microphone
-file = media/agender.wav 							# if not live input read in from this file

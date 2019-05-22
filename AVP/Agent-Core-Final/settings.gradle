@@ -1,3 +1,0 @@
-rootProject.name = 'dm'
-
-include 'DM_Tools:QAM'

@@ -1,3 +1,0 @@
-live = false 										# $(bool) use live input from a camera
-file = media/expert.video[crop].mp4 							# if not live input read in from this file
-

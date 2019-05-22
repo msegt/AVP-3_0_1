@@ -1,1 +1,0 @@
-..\..\bin\xmlpipe -debug ssi.log -config agender_record agender

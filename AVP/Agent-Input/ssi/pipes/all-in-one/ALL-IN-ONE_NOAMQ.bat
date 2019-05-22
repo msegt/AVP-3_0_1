@@ -1,1 +1,0 @@
-..\..\bin\xmlpipe -debug ssi.log -config all-in-one_noamq all-in-one
