@@ -2,7 +2,7 @@
 
 This project is part of an installer for the Aria Valuspa Platform v3.0.1. 
 
-_**Note that issues with the platform and not the installer should be reported/created in the AVP repository indicated bellow!_**
+_**Note that issues with the platform and not the installer should be reported/created in the AVP repository indicated bellow!**_
 
 The latest release of the AVP (v3.0.1 at 17/05/2019) can be found at: https://github.com/ARIA-VALUSPA/AVP
 
